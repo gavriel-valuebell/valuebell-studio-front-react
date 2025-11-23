@@ -1,9 +1,54 @@
 .container {
-  max-width: 600px;
-  margin: 50px auto;
-  padding: 20px;
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: var(--brand-surface);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.formHeader {
+  text-align: center;
+  margin-bottom: 8px;
+
+  h2 {
+    margin: 0 0 8px 0;
+    font-size: 1.75rem;
+    font-weight: 600;
+  }
+
+  p {
+    margin: 0;
+    color: var(--brand-text-muted);
+    font-size: 0.95rem;
+  }
 }
 
 .label {
-  color: white;
+  font-weight: 500;
+  color: var(--brand-text-muted);
+  margin-bottom: 4px;
+  display: block;
+}
+
+/* Customizing Ant Design inputs within this container if needed, 
+   though ConfigProvider handles most. We can add specific overrides here. */
+:global(.ant-input-affix-wrapper) {
+  background-color: #2a2a2a !important; 
+  border-color: #333 !important;
+}
+
+:global(.ant-input-affix-wrapper:hover),
+:global(.ant-input-affix-wrapper:focus), 
+:global(.ant-input-affix-wrapper-focused) {
+  border-color: var(--brand-orange) !important;
+}
+
+:global(.ant-input) {
+  background-color: transparent !important;
 }
